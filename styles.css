@@ -1,0 +1,703 @@
+/* ----------- RESET -----------  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  background-color: #303030;
+  color: whitesmoke;
+  margin-top: 2.5rem;
+}
+
+/* ----------- HEADER ----------- */
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 16px;
+  background-color: black;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgb(3, 3, 29);
+  z-index: 1000;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.header-center {
+  flex: 1;
+  max-width: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  overflow: visible;
+}
+
+.menu-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 8px;
+  font-size: 1.5rem;
+  color: whitesmoke;
+  margin-right: 1rem;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* logo de YouTube 2005 */
+.logo-image img {
+  cursor: pointer;
+  background-color: whitesmoke;
+  width: 86px;
+  height: 23px;
+  margin-left: 1px;
+}
+
+/* boton del logo de YouTube 2005 */
+.logo-image {
+  cursor: pointer;
+  border-radius: 24px 1rem 1rem 24px;
+  width: 102px;
+  height: 1.4rem;
+  margin: 1px;
+  color: whitesmoke;
+  border: none;
+}
+
+/* barra de busqueda del header */
+.search-form {
+  display: flex;
+  flex: 1;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #303030;
+  border-radius: 20px 0 0 20px;
+  background: #121212;
+  color: whitesmoke;
+}
+
+.search-form button {
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #303030;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  background: #303030;
+  color: whitesmoke;
+}
+
+.mic-button {
+  cursor: pointer;
+  background: #303030;
+  border: none;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.plus-button {
+  cursor: pointer;
+  background-color: #303030;
+  border: none;
+  border-radius: 1rem;
+  width: 90px;
+  height: 2rem;
+  color: whitesmoke;
+  margin: 0;
+  padding: 11px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  overflow: visible;
+  gap: 6px;
+  align-items: center;
+}
+
+.bell-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -18px;
+}
+
+/*icono del Plus y de la Campana*/
+.header-right i {
+  cursor: pointer;
+  font-size: 21px;
+}
+
+.user-avatar {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  cursor: pointer;
+  background-color: #303030;
+  border: none;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  margin-left: 18px;
+  flex-shrink: 0;
+}
+
+.menu-btn:hover,
+.mic-button:hover,
+.bell-button:hover {
+  background: #383838;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plus-button:hover {
+  background: #383838;
+}
+
+/* --------- WRAPPER FLEX --------- */
+.wrapper {
+  display: flex;
+  padding-top: 0;
+}
+
+/* ----------- SIDEBAR ----------- */
+.sidebar {
+  position: fixed;
+  width: 72px;
+  top: 56px;
+  left: 0;
+  height: calc(100vh - 56px);
+  background: black;
+  padding-top: 8px;
+  overflow-y: auto;
+  z-index: 900;
+  border-right: 1px solid rgb(3, 3, 29);
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  color: whitesmoke;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+  flex-direction: column;
+  border-radius: 12px;
+  transition: background-color 0.2s;
+}
+
+.sidebar a i {
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+}
+
+.sidebar a:hover {
+  background: #383838;
+  padding: 16px 0;
+}
+
+/* -----Contenido principal ------ */
+.main {
+  display: flex;
+  margin-left: 72px;
+  flex-grow: 1;
+  flex-direction: column;
+  padding-top: 56px;
+  background: black;
+}
+
+/* ----------- SUBHEADER ----------- */
+.subheader {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 56px;
+  left: 72px;
+  right: 0;
+  height: 56px;
+  background: black;
+  padding: 0 24px;
+  border-bottom: 1px solid rgb(3, 3, 29);
+  z-index: 950;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.subheader a,
+.subheader-link {
+  cursor: pointer;
+  padding: 6px 12px;
+  background: #303030;
+  border-radius: 12px;
+  padding: 6px 12px;
+  margin-right: 12px;
+  color: whitesmoke;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 14px;
+  border: 1px solid black;
+  transition: background-color 0.2s;
+}
+
+.subheader-link.active {
+  background: whitesmoke;
+  color: black;
+  font-weight: bold;
+}
+
+/* ------- GRILLA DE VIDEOS ------ */
+.video-grid {
+  padding: 12px 24px 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.video-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-radius: 3%;
+}
+
+.video-card:hover {
+  background: #383838;
+  opacity: 0.7;
+}
+
+.video-card .thumb {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-card .thumb img {
+  aspect-ratio: 16 / 9;
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video-card .duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: whitesmoke;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.video-card .video-info {
+  display: flex;
+  padding-top: 12px;
+}
+
+.video-card .video-info .avatar {
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.video-card .video-info .text h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.video-card .video-info .text p {
+  font-size: 12px;
+  color: lightgrey;
+}
+
+.video-card .video-info .text .channel {
+  margin-bottom: 2px;
+}
+
+/* ------- RESPONSIVE ------ */
+/* Escritorio >1024 y Tablets (710px-1023px) */
+
+/* Tablets 710 – 1023 px */
+@media (min-width: 710px) {
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none; /*esconde la barra de desplazamiento (¡Es horrible esta barra!)*/
+}
+
+@media (min-width: 1024px) {
+  .video-grid {
+    gap: 20px;
+  }
+}
+
+/* Móviles 470 – 709 px */
+@media (min-width: 470px) and (max-width: 709px) {
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .header-right {
+    margin-right: -8px;
+  }
+
+  .subheader {
+    left: 0;
+  }
+
+  .main {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .logo-image img {
+    cursor: pointer;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 20px;
+    margin-left: 1px;
+  }
+
+  .logo-image {
+    cursor: pointer;
+    border-radius: 15%;
+    width: 60px;
+    height: 1.8rem;
+    margin-left: -11px;
+  }
+
+  .search-form input {
+    width: 50%;
+    border-left: transparent;
+  }
+
+  .plus-button span {
+    padding: 1px;
+  }
+}
+
+/* Móviles +Pequeños 210px - 469 px */
+@media (min-width: 210px) and (max-width: 469px) {
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 16px 8px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .header {
+    padding: 0 16px;
+  }
+
+  .header-center {
+    width: 20px;
+  }
+
+  .subheader {
+    left: 0;
+    padding: 0 16px;
+  }
+
+  .main {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .search-form input {
+    width: 20%;
+    background: transparent;
+  }
+
+  .search-form button {
+    cursor: pointer;
+    flex-shrink: 0;
+    background: #303030;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 35px;
+    color: whitesmoke;
+  }
+
+  .user-avatar {
+    cursor: pointer;
+    background-color: #303030;
+    border: none;
+    border-radius: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+    flex-shrink: 0;
+  }
+
+  .menu-btn {
+    cursor: pointer;
+    padding: 8px;
+    margin-left: -1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: flex;
+  }
+
+  .mic-button {
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .logo-image img {
+    cursor: pointer;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 20px;
+    margin-left: 1px;
+  }
+
+  .logo-image {
+    cursor: pointer;
+    border-radius: 15%;
+    width: 40px;
+    height: 1.8rem;
+    margin-left: -11px;
+  }
+
+  .plus-button {
+    cursor: pointer;
+    background-color: #303030;
+    border: none;
+    border-radius: 1rem;
+    width: 66px;
+    height: 2rem;
+    color: whitesmoke;
+    padding: 11px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    overflow: visible;
+    gap: 6px;
+    align-items: center;
+    margin-left: -0.1rem;
+  }
+
+  .plus-button i {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: -0.1rem;
+  }
+
+  .plus-button span {
+    cursor: pointer;
+    border-radius: 0.1rem;
+    width: 70px;
+    height: 2rem;
+    color: whitesmoke;
+    margin: -16px;
+    padding: 11px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: flex;
+    overflow: visible;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .bell-button {
+    margin-left: -0.8rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-avatar {
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-left: -1.1rem;
+  }
+}
+
+/* Móviles Hormiga que no existen <210 px */
+@media (min-width: 50px) and (max-width: 209px) {
+  .video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 16px 8px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .header {
+    padding: 0 16px;
+  }
+
+  .subheader {
+    left: 0;
+    padding: 0 16px;
+  }
+
+  .main {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .search-form input {
+    display: none;
+  }
+
+  .mic-button {
+    display: none;
+  }
+
+  .bell-button {
+    display: none;
+  }
+
+  .search-form button {
+    cursor: pointer;
+    flex-shrink: 0;
+    background: #303030;
+    border: none;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    color: whitesmoke;
+    margin-left: 0.1rem;
+    margin-right: -0.5rem;
+  }
+
+  .search-form input {
+    width: 100%;
+  }
+
+  .plus-button span {
+    display: none;
+  }
+
+  .plus-button {
+    cursor: pointer;
+    background-color: #303030;
+    border: none;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-left: 0.5rem;
+    margin-right: -0.4rem;
+  }
+
+  .user-avatar {
+    cursor: pointer;
+    background-color: #303030;
+    border: none;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-left: 0.1rem;
+    margin-right: -0.4rem;
+  }
+
+  .menu-btn {
+    cursor: pointer;
+    padding: 8px;
+    margin-left: -0.9rem;
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+  }
+
+  .logo-image img {
+    cursor: pointer;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 20px;
+    margin-left: -0.1rem;
+  }
+
+  .logo-image {
+    cursor: pointer;
+    border-radius: 15%;
+    width: 40px;
+    height: 1.8rem;
+    margin-left: -0.1rem;
+  }
+}

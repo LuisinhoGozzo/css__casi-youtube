@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/png" href="/images/youtube-minilogo.png" />
+    <title>Casi__YouTube</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-btn" aria-label="Abrir el menú lateral">
+          <i class="fas fa-bars"></i>
+        </button>
+        <button class="logo-image" aria-label="Abrir página de inicio">
+          <img src="./images/youtube-2005.png" alt="Ir al inicio" />
+        </button>
+      </div>
+
+    <div class="header-center">
+      <form class="search-form">
+        <input type="search" placeholder="Buscar" aria-label="Buscar" />
+        <button type="submit" aria-label="Buscar"><i class="fas fa-search"></i></button>
+      </form>
+      <button class="mic-button" aria-label="Búsqueda por voz"><i class="fas fa-microphone"></i></button>
+    </div>
+
+      <div class="header-right">
+        <button class="plus-button"
+          aria-label="Subir video o emitir en directo">
+          <i class="fas fa-plus"></i> <span>Crear</span>
+        </button>
+        <button class="bell-button" aria-label="Notificaciones">
+          <i class="fas fa-bell"></i>
+        </button>
+            <div class="user">
+          <img class="user-avatar" src="/images/LG-user.jpg" alt="">
+        </div>
+      </div>
+    </header>
+
+    <!-- WRAPPER: SIDEBAR + MAIN -->
+    <div class="wrapper">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <nav>
+          <a href="#"><i class="fa-solid fa-house"></i><span>Inicio</span></a>
+          <a href="#"
+            ><i class="fas fa-bolt"></i><span>Shorts</span></a
+            >
+          <a href="#"><i class="fas fa-list-ul"></i><span>Suscripciones</span></a>
+          <a href="#"
+            ><i class="fas fa-user-circle"></i><span>Tú</span></a
+          >
+        </nav>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+        <!-- SUB-HEADER -->
+        <nav class="subheader">
+          <button class="subheader-link active">Todo</button>
+          <a href="#">Cine de ciencia ficción</a>
+          <a href="#">Videojuegos</a>
+          <a href="#">Podcasts</a>
+          <a href="#">Serie Mundial</a>
+          <a href="#">Física</a>
+          <a href="#">Jetlags</a>
+          <a href="#">Comedias de situación</a>
+          <a href="#">Viaje en el tiempo</a>
+          <a href="#">Gatos</a>
+          <a href="#">Freelancing</a>
+          <a href="#">Recetas</a>
+          <a href="#">Líneas de tiempo</a>
+          <a href="#">Constantinopla</a>
+          <a href="#">Multiverso</a>
+          <a href="#">Entrevistas</a>
+        </nav>
+
+<section class="video-grid">
+  <!-- video 1 -->
+  <article class="video-card">
+    <div class="thumb">
+      <img src="/images/dever.jpg" alt="">
+      <span class="duration">3:53</span>
+    </div>
+    <div class="video-info">
+      <img class="avatar" src="/images/tonight-show.jpg" alt="">
+      <div class="text">
+        <h3>Entrada de Kaitlyn Dever al Tonight Show</h3>
+        <p class="channel">IMDb</p>
+        <p class="stats">29K visualizaciones • hace 6 años</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- video 2 -->
+  <article class="video-card">
+    <div class="thumb">
+      <img src="/images/Boca2000.jpg" alt="">
+      <span class="duration">12:10</span>
+    </div>
+    <div class="video-info">
+      <img class="avatar" src="/images/memorias-futbol.jpg" alt="">
+      <div class="text">
+        <h3>💙💛 BOCA vs Real Madrid (2-1) 🏆 Copa INTERCONTINENTAL (2000) La noche de Riquelme vs Galácticos</h3>
+        <p class="channel">Memorias del Fútbol</p>
+        <p class="stats">1,66M visualizaciones • hace 5 años</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- video 3 -->
+  <article class="video-card">
+    <div class="thumb">
+      <img src="/images/ohtani.jpg" alt="">
+      <span class="duration">18:37</span>
+    </div>
+    <div class="video-info">
+      <img class="avatar" src="/images/espndeportes.png" alt="">
+      <div class="text">
+        <h3>El Show de SHOHEI OHTANI</h3>
+        <p class="channel">ESPN Deportes</p>
+        <p class="stats">131 K de visualizaciones · hace 2 semanas</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- video 4 -->
+  <article class="video-card">
+    <div class="thumb">
+      <img src="/images/supernatural.jpg" alt="">
+      <span class="duration">0:49</span>
+    </div>
+    <div class="video-info">
+      <img class="avatar" src="/images/Film-scene.jpg" alt="">
+      <div class="text">
+        <h3>Supernatural - Ángeles cayendo del cielo (Final Temporada 8)</h3>
+        <p class="channel">FilmScene</p>
+        <p class="stats">144K visualizaciones • hace 12 años</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- video 5 -->
+  <article class="video-card">
+    <div class="thumb">
+      <img src="/images/proyecto-youtube.jpg" alt="">
+      <span class="duration">12:34</span>
+    </div>
+    <div class="video-info">
+      <img class="avatar" src="/images/gozzo.jpg" alt="">
+      <div class="text">
+        <h3>¿Por qué no tengo nariz, ni uñas, ni batería? ¿Y por qué tengo el cabello azul?</h3>
+        <p class="channel">Myself</p>
+        <p class="stats">10 visualizaciones · hace 1 días</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- video 6 -->
+  <article class="video-card">
+    <div class="thumb">
+      <img src="/images/arjona.jpg" alt="">
+      <span class="duration">4:15</span>
+    </div>
+    <div class="video-info">
+      <img class="avatar" src="/images/RA-Arjona.png" alt="">
+      <div class="text">
+        <h3>Ricardo Arjona - Si Tu No Existieras (Video Oficial)</h3>
+        <p class="channel">Ricardo Arjona</p>
+        <p class="stats">131 M visualizaciones · hace 12 años</p>
+      </div>
+    </div>
+  </article>
+</section>
+      </div>
+    </main>
+  </body>
+</html>
